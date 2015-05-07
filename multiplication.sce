@@ -1,0 +1,33 @@
+x = linspace(0,720,100)
+y = sind(x)
+z = cosd(x)
+mul = []
+for i = 1:length(x)             //Note that the for loop should start from value 1 and not 0
+    mul($+1) = y(i)*z(i)
+end
+//Continuous time plot
+subplot(321)
+plot2d(x,y)
+xlabel("time-->")
+ylabel("y = sin t")
+subplot(323)
+plot2d(x,z)
+xlabel("time-->")
+ylabel("z = cos t")
+subplot(325)
+plot2d(x,mul)
+xlabel("time-->")
+ylabel("sin t X cos t")
+//Discrete time plot
+subplot(322)
+plot2d3(x,y)
+xlabel("time-->")
+ylabel("y = sin t")
+subplot(324)
+plot2d3(x,z)
+xlabel("time-->")
+ylabel("z = cos t")
+subplot(326)
+plot2d3(x,mul)
+xlabel("time-->")
+ylabel("sin t X cos t")
